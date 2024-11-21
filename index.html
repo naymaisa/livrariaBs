@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="https://cdn.pixabay.com/photo/2017/08/09/17/20/bible-2615221_1280.png"
+        type="image/x-icon"><!--para colocar o icone pequeno la emcima no nome do site-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!--para colocar o icon pelo bootstrap-->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!--navbar-expand-lg significa que, a partir de telas grandes, a barra de navegação vai ser exibida horizontalmente com seus itens visíveis.Em telas menores, a navbar será colapsada em um botão de menu;
+    sticky-top: faz com que a barra de navegaçao fique fixa no topo da página quando o usuário rolar para baixo; 
+    p-4:(padding) o número 4 representa a quantidade de espaçamento-->
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+        <div class="container">
+            <!--A classe navbar-brand aplica um estilo apropriado para logotipos ou nomes de marca dentro da barra de navegação, como alinhamento à esquerda e ajuste de tamanho de fonte.-->
+            <!--m-0: margem de 0-->
+            <h1 class="navbar-brand m-0 section-title">Livraria Infinito</h1>
+            <!--navbar-toggler: botão de alternância para a barra de navegação. Ele aparece em dispositivos móveis ou tablets.
+            data-bs-toggle="collapse": Indica que o botão deve acionar a ação de "colapsar" ou "expandir" um elemento.
+            data-bs-target: Especifica o ID do elemento que será mostrado ou ocultado ao clicar no botão. -->
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+                <!-- <span> com a classe navbar-toggler-icon. Esse span é o responsável por exibir o ícone de "hambúrguer"-->
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!--navbar-collapse:um menu que se adapta ao tamanho da tela.
+            justify-content-end: o nav vai estar na extrema direita-->
+            <nav class="navbar-collapse collapse justify-content-end" id="menu-navegacao">
+                <!--nav-pills com nav:Os itens são apresentados horizontalmente,o item ativo (com a classe active) terá um fundo destacado, os itens não têm marcadores (como bolinhas) nem numeração.
+                d-block é o display block, ou seja os itens da barra de nav serao mostrados um debaixo do outro
+                d-md-flex: o d-block adicionado fez com que no desltop os itens de nsv tbm ficassem debaixo um do outro, mas como nao queremos vamos colocar o displayflex a partir do tamahno medio (md)-->
+                <ul class="nav nav-pills d-block d-md-flex">
+                    <!--fw-bold é font weigth bold, ou seja negrito-->
+                    <li class="nav-item fw-bold">
+                        <a href="#sobre-o-restaurante" class="nav-link">
+                            <!--icone de casa inicial; me-1 é de margin end, ou seja margem a direita, quanto maior o numero maior a margem-->
+                            <i class="bi bi-house-door me-1"></i>
+                            Sobre a loja
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#eventos" class="nav-link">
+                            <!--icone de calendario-->
+                            <i class="bi bi-calendar-check me-1"></i>
+                            Eventos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#cardapio" class="nav-link">
+                            <!--icone de arquivo-->
+                            <i class="bi bi-card-text me-1"></i>
+                            Livros
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a href="#fale-conosco" class="nav-link">
+                            <!--icone de balaozinho-->
+                            <i class="bi bi-chat-left-text me-1"></i>
+                            Fale conosco
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--data-bs-smooth-scroll="true": quando clicar no nav e ir para uma sessao ira aparecer o titulo da sessao e nao cortar-->
+    <div data-bs-spy="scroll" data-bs-target="cabecalho" data-bs-smooth-scroll="true">
+        <section id="sobre-o-restaurante">
+            <!--data-bs-ride="carousel": faz o carrossel iniciar automaticamente quando a página for carregada, criando um efeito de transição entre os itens.-->
+            <div class="carousel slide" data-bs-ride="carousel" id="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="4000">
+                        <img src="./images/books-1204029_960_720.jpg" alt="Foto do espaço interno do restaurante">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./images/library-488690_960_720.jpg" alt="Duas taças de vinho">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="4000">
+                        <img src="./images/library-5641389_960_720.jpg" alt=" Uma mesa com comida">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+            <div class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <!--col-md-5 significa que, em telas médias (a partir de 768px de largura), o div ocupará 5/12 da linha. -->
+                        <div class="col-md-5">
+                            <!--d-block (display block) w-100(width de 100%, ou sej a img vai ocupar 100% do espaço md-5)
+                            rounded é para arrendondar a borda da imagem-->
+                            <img src="./images/dentro.jpg" class="d-block w-100 rounded"
+                                alt="Foto do espaço interno do restaurante">
+                        </div>
+                        <div class="col-md-7 mt-3 mt-md-0">
+                            <h2 class="section-title">Sobre <span class="text-colored">a livraria</span></h2>
+                            <p>
+                                A Livraria Infinito é um espaço dedicado à paixão pela leitura, oferecendo um acervo
+                                diversificado que vai de clássicos da literatura a lançamentos contemporâneos, atendendo
+                                a todos os gostos e idades. Mais do que um local para comprar livros, é um ponto de
+                                encontro para a comunidade literária, promovendo eventos como lançamentos e encontros
+                                com autores. Com um ambiente acolhedor e inspirador, a livraria convida todos a
+                                descobrir novos mundos e compartilhar o amor pela leitura, tornando cada visita uma
+                                experiência única e transformadora
+                            </p>
+                            <h3 class="section-title">Sobre <span class="text-colored">o espaço</span></h3>
+                            <p>
+                                O espaço da Livraria Infinito é acolhedor e inspirador, com estantes organizadas e áreas
+                                tranquilas para leitura. A livraria oferece um ambiente confortável para explorar
+                                diversos gêneros literários, além de espaços para eventos e encontros com autores. A
+                                decoração e iluminação suave criam uma atmosfera ideal para quem deseja se perder nas
+                                páginas de um bom livro.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="eventos" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center">Nossos <span class="text-colored">eventos</span></h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <img src="https://colegioplanck.com.br/wp-content/uploads/2023/03/Colegio-Planck-Como-promover-o-interesse-pela-leitura-em-criancas-do-fundamental-anos-iniciais-Autores-Grupo-S2-Marketing-Freepik.jpg"
+                            alt="" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title text-colored fs-4">
+                            <!--bi bi-calendar-heart-fill: bootstrap icone de calendario com coraçao-->
+                            <i class="bi bi-calendar-heart-fill"></i>
+                            Leitura para crianças
+                        </h3>
+                        <p>
+                            A leitura para crianças é essencial para o desenvolvimento cognitivo e emocional,
+                            estimulando a imaginação, o vocabulário e a compreensão do mundo. Livros com ilustrações e
+                            histórias envolventes despertam o interesse pela leitura, promovem a aprendizagem de valores
+                            e emoções, e criam momentos de conexão entre crianças e adultos, estabelecendo uma base
+                            sólida para o aprendizado ao longo da vida.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://cdn.pixabay.com/photo/2017/02/25/00/43/autographed-books-2096705_1280.jpg"
+                            alt="" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title text-colored fs-4">
+                            <i class="bi bi-arrow-through-heart-fill"></i>
+                            Autógrafos
+                        </h3>
+                        <p>
+
+                            O autógrafo é uma assinatura pessoal de uma figura pública, como um autor, que torna uma
+                            obra única e valiosa para o fã. Receber um autógrafo em um livro é uma experiência especial,
+                            criando uma conexão direta entre o leitor e o autor, frequentemente vivenciada em
+                            lançamentos de livros ou eventos literários.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <img src="https://cdn.pixabay.com/photo/2015/05/05/15/06/read-book-club-med-753891_1280.jpg"
+                            alt="" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title text-colored fs-4">
+                            <i class="bi bi-people-fill"></i>
+                            Clube do livro
+                        </h3>
+                        <p>
+                            O Clube do Livro é um grupo de pessoas que se reúnem para ler e discutir livros,
+                            compartilhando suas impressões e recomendações. Através dessas reuniões, os participantes
+                            promovem o pensamento crítico e o prazer pela leitura em grupo, além de fortalecer o hábito
+                            de ler e criar uma comunidade de leitores.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="cardapio" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center mb-5">Nossos <span class="text-colored">livros</span></h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                        <!--nav-pills é para os escritos ficarem com aparencia de botoes e o flex column tira o efeito do pills de deixar um do ladod o outro para deixar em colunas-->
+                        <nav class="nav nav-pills flex-column nav-cardapio">
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#bebidas-sem-alcool"
+                                class="fw-bold text-start nav-link text-colored active"> Fantasia</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#bebidas-alcoolicas"
+                                class="fw-bold text-start nav-link text-colored ">Historia</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#entradas"
+                                class="fw-bold text-start nav-link text-colored ">Filosofia</button>
+                        </nav>
+                    </aside>
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="bebidas-sem-alcool">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="./images/a-guerra-dos-tronos-cke.webp"
+                                            alt="coca-cola">
+                                        <h5 class="text-colored fw-bold mt-2">A guerra dos tronos</h5>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="./images/sombra.jpg" alt="suco">
+                                        <h5 class="text-colored fw-bold mt-2">Sombra a Ossos</h5>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="./images/a-rainha-sol.jpg" alt="suco">
+                                        <h5 class="text-colored fw-bold mt-2">A Rainha do Sol</h5>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane " id="bebidas-alcoolicas">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100"
+                                            src="./images/uma_historia_mundo_9788525427526_9788525427144_hd.jpg"
+                                            alt="cerveja">
+                                        <h5 class="text-colored fw-bold mt-2">Uma Historia do Mundo</h5>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="./images/91x3S8bkJUL._AC_UF894,1000_QL80_.jpg"
+                                            alt="vinho">
+                                        <h5 class="text-colored fw-bold mt-2">Historia Geral</h5>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane " id="entradas">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="./images/filo.jpg" alt="nome da entrada">
+                                        <h5 class="text-colored fw-bold mt-2">O livro de filosofia</h5>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img class="d-block w-100" src="./images/filo1.jpg" alt="nome da entrada">
+                                        <h5 class="text-colored fw-bold mt-2">Mestres da filosofia</h5>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </section>
+    <section id="fale-conosco" class="pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <h2 class="section-title text-center">Fale <span class="text-colored">conosco</span></h2>
+            </div>
+            <div class="row">
+                <div class="col-md-7 mb-5">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label fw-bold text-colored">Seu nome</label>
+                            <input type="text" id="nome" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold text-colored">Seu email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label fw-bold text-colored">Seu telefone
+                                (opcional)</label>
+                            <input type="tel" id="telefone" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensgem" class="form-label fw-bold text-colored">Sua mensagem</label>
+                            <textarea class="form-control" id="mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn fw-bold">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <h3 class="section-title fs-4 text-colored">
+                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                            Redes sociais
+                        </h3>
+                        <ul class="social-links">
+                            <li class="fs-5">
+                                <a href="#">
+                                    <i class="bi bi-facebook text-colored"></i>
+                                </a>
+                            </li>
+                            <li class="fs-5 ms-1 me-1">
+                                <a href="#">
+                                    <i class="bi bi-instagram text-colored"></i>
+                                </a>
+                            </li>
+                            <li class="fs-5">
+                                <a href="#">
+                                    <i class="bi bi-whatsapp text-colored"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row mt-4">
+                        <h3 class="section-title fs-4 text-colored">
+                            <i class="bi bi-cursor-fill"></i>
+                            Endereço
+                        </h3>
+                        <p>Rua Leitura nº145, Bairro Biblioteca - Belo Horizonte - MG</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+</body>
+
+</html>

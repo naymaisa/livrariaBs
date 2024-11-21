@@ -1,0 +1,89 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+/*barra de navegaçao inicial*/
+.navbar {
+    background-color: #8894b7;
+}
+
+/* o item do menu que estiver ativo no momento*/
+#cabecalho .nav .nav-link.active {
+    background-color: #fff;
+    color: #8894b7;
+}
+
+.navbar-brand {
+    font-size: 2.5rem;
+    /* Aumente o valor conforme necessário */
+}
+
+.carousel {
+    max-width: 1000px;
+    /* Limite a largura do carousel em 1200px (ou ajuste conforme necessário) */
+    width: 100%;
+    /* Garante que o carousel ocupe 100% da largura disponível até o limite máximo */
+    margin: 0 auto;
+    /* Centraliza o carousel horizontalmente */
+    margin-top: 30px;
+
+}
+
+.carousel img {
+    max-height: 600px;
+    /*largura do carousel*/
+}
+
+/*o escrito do nome do restaurante, bem como os outros itens do menu de navegaçao*/
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover,
+.nav-cardapio .nav-link.active:hover {
+    color: #fff;
+}
+
+
+.navbar-toggler {
+    background-color: #f8eadc;
+}
+
+
+.section-title {
+    font-family: "Pacifico", cursive;
+}
+
+#sobre-o-restaurante,
+#cardapio {
+    background-color: #f8eadc;
+}
+
+.text-colored {
+    color: #8894b7;
+}
+
+/*.nav-cardapio .nav-link.active é para estilizar apenas o item ativo do cardapìo*/
+.nav-cardapio .nav-link.active,
+#fale-conosco button {
+    background-color: #8894b7;
+    color: #fff;
+}
+
+.nav-cardapio .nav-link:hover {
+    color: #8894b7;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+@media (max-width: 767px) {
+    .carousel-item img {
+        height: 280px;
+    }
+
+}
